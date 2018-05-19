@@ -19,7 +19,6 @@
 		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
 		<link href="css/animations.css" rel="stylesheet"> 
 		<link href="css/style.css" rel="stylesheet"> 
-		<link href="css/custom.css" rel="stylesheet">
 		<link rel="Stylesheet" href="css/loginDialog.css" />
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="js/nebPay.js"></script>
@@ -210,6 +209,10 @@
     		}
 
     		function searchHandle(resp){
+    			if(resp == null || resp.execute_err != "") {
+    				alert("查询失败...请刷新页面重试！");
+    				return;
+    			}
     			var result = JSON.parse(resp.result);
     			$("#publicPlan").append("<div class=\"row\">");
     			for(var i in result){

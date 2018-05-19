@@ -281,6 +281,11 @@
 
     		function searchHandle(resp){
     		//	alert(JSON.stringify(resp));
+    			if(resp.execute_err != "") {
+    				alert("该用户不存在，请重新输入！");
+    				showSearchBox();
+    				return;
+    			}
     			var result = JSON.parse(resp.result);
     			$("#userplan").append("<div class=\"row\" id=\"planrow\">");
     			for(var i in result){
