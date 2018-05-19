@@ -19,6 +19,7 @@
 		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
 		<link href="css/animations.css" rel="stylesheet"> 
 		<link href="css/style.css" rel="stylesheet"> 
+		<link href="css/custom.css" rel="stylesheet">
 	</head>
 
 	<body class="no-trans">
@@ -74,14 +75,14 @@
 										<!-- Collect the nav links, forms, and other content for toggling -->
 										<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 											<ul class="nav navbar-nav navbar-right">
-												<li class="active"><a href="#banner">首页</a></li>
+												<li><a href="index.html">首页</a></li>
 												<li><a href="services.html">创建小目标</a></li>
 												<li><a href="myaim.html">我的小目标</a></li>
 												<li><a href="publicboard.html">公开计划</a></li>
-												<li><a href="rules.html">详细规则</a></li>
+												<li class="active"><a href="rules.html">详细规则</a></li>
+											<!--	<li><a href="#about">关于我们</a></li>
 												
-												
-											<!--	<li><a href="#portfolio">Portfolio</a></li>
+												<li><a href="#portfolio">Portfolio</a></li>
 												<li><a href="#team">Team</a></li>
 												<li><a href="#price">Price</a></li>
 											-->
@@ -109,25 +110,42 @@
 		<div id="banner" class="banner">
 			<div class="banner-image"></div>
 			<div class="banner-caption">
-				<div class="container">
-					<div class="row">					 
-						<div class="caption-data" style="margin-top: 0px; opacity: 1;" data-animation-effect="fadeIn">
-								<h1>一 个 小 目 标！</h1>
-								<div class="littlespace"></div>
-								<h3 class="padding-top30">生活不止眼前的苟且，还有理想中的诗和远方</h3>
-								<h3 class="padding-top30">给自己一个机会，把握住当下的时时刻刻</h3>
-								<h3 class="padding-top30">时光匆忙，莫到老时回首恨</h3>
-								<h3 class="padding-top30">你的人生，你做主！</h3>
-								<a href="services.html" class="active">
-									<div class="padding-top60 contact-form">
-										<button class="btn cta-button"><font size="5">创建小目标</font></button>
-									</div>
-								</a>
-							</div>
+
+			<div class="container no-view caption-data"  data-animation-effect="fadeIn">
+				<h1 id="services" class="title text-center">详细规则</h1>
+				<div class="space"></div>
+				<div class="row">
+					<div class="col-md-6" style="font-size: 18px;text-align: left;">
+						<h2 class="media-heading" style="text-align: center;">PLAN A</h2>
+						<p>计划一的设计初衷是在于培养用户的自觉性，通过每天打卡最后完成计划一次性获得奖励的形式，让用户体验坚持的愉悦与成功的快感。具体的运作原理如下：</p>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 首先需要用户设置计划的持续时间和每天投入的金额；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 用户需每天向合约发起一笔交易进行签到，同时每天向合约转入一定金额；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 当计划时间到后，根据用户签到情况返回部分或者全部投入金额；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 此外，如果签到情况优秀，还会获得额外奖励；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 整个计划使用星云币进行激励或惩罚的形式让用户培养出坚持的好习惯。</li>
+						</ul>
 					</div>
-				</div>
+			
+					<div class="col-md-6" style="font-size: 18px;text-align: left;">
+						<h2 class="media-heading" style="text-align: center;">PLAN B</h2>
+						<p>计划二与计划一相反，一次性投入一定量星云币，然后每天签到就给与奖励，连续签到奖励更多 (此处奖励都是用户最开始投入的星云币，并非合约预先存入)。具体的运作原理如下：</p>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 首先用户需要设定创建计划时初始投入的金额以及计划持续的时间；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 调用合约并向合约转入上述填入的金额进行创建新计划；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 用户每天签到，合约都会向用户返回一定量金额（具体根据用户初始存入金额计算）；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 合约向用户返回的金额是根据用户初始投入的金额构成的等差数列，连续签到会在前一天的奖励之上再加额外的奖励；如果用户断签，奖励金额回归到等差数列初始值；</li>
+							<li><i class="fa fa-arrow-circle-right pr-10 "></i> 此计划希望通过每天持续的奖励、连续签到奖励更多的形式，通过奖励激发用户的行动力。</li>
+						</ul>
+					</div>
+			</div>
+
+
 			</div>
 		</div>
+
+
+		
 
 		<!-- JavaScript --> 
 		<script type="text/javascript" src="plugins/jquery.min.js"></script>
@@ -136,6 +154,8 @@
 		<script type="text/javascript" src="plugins/isotope/isotope.pkgd.min.js"></script>
 		<script type="text/javascript" src="plugins/jquery.backstretch.min.js"></script>
 		<script type="text/javascript" src="plugins/jquery.appear.js"></script>
+ <script src="contact/jqBootstrapValidation.js"></script>
+ <script src="contact/contact_me.js"></script>
 
 		<!-- Custom Scripts -->
 		<script type="text/javascript" src="js/custom.js"></script>

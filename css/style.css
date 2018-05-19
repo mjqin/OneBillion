@@ -18,7 +18,7 @@ body {
 	font-size: 15px;
 	line-height: 1.50;
 	color: #333333;
-	background-color: #fff;
+	background-color: #0e8275;
 	position: relative;
 }
 h1,
@@ -147,6 +147,14 @@ blockquote {
 	top: 50%;
 	width: 100%;
 	z-index: 2;
+	padding-bottom: 5%;
+}
+.public-banner-caption {
+	position: absolute;
+	top: 20%;
+	width: 100%;
+	z-index: 2;
+	padding-bottom: 5%;
 }
 .subfooter {
 	background-color: #1ABC9C;
@@ -245,10 +253,13 @@ border:0px;
 }
 .bg-image-2 {
 }
+
 .caption-data {position: absolute; top: 50%; left: 50%; z-index: 20; text-align: center; -webkit-transform: translate(-50%,-50%); -moz-transform: translate(-50%,-50%); transform: translate(-50%,-50%);}
-.caption-data h1 {text-transform: uppercase;}
-.caption-data h1 span {font-size: inherit; line-height: inherit; font-weight: inherit;}
-.caption-data h3{line-height:34px;}
+.caption-data, .public-caption-data h1 {text-transform: uppercase;}
+.caption-data, .public-caption-data h1 span {font-size: inherit; line-height: inherit; font-weight: inherit;}
+.caption-data, .public-caption-data h3{line-height:34px;}
+
+.public-caption-data { top: 50%; left: 50%; z-index: 20; text-align: center; }
 button.cta-button.btn-light, button.cta-button.btn-dark, .contact-form button.cta-button, button.cta-button.btn-default {background: #FFFFFF;color: #09776C;}
 button.cta-button {
 font-size: 14px;
@@ -543,6 +554,9 @@ color:#fff;
 .space {
 	padding: 20px 0;
 }
+.littlespace{
+	padding: 1px 0;
+}
 .pr-10 {
 	padding-right: 10px;
 }
@@ -571,6 +585,16 @@ font-size:42px;
 .banner-caption h6 {
 	color: #C5FFF8;
 }
+
+.public-banner-caption h1,
+.public-banner-caption h2{
+	color: #C5FFF8;
+}
+
+.public-banner-caption h1{
+	font-size: 45px;
+}
+
 .banner-caption h1 {
 	font-size: 45px;
 }
@@ -587,12 +611,18 @@ text-align:center;padding: 60px 0;background: #2C3E50;color: #8D9DAD;}
 .hero-caption h2{
 text-align:center;color: #fff;}
 .hero-caption p{
-font-size: 15px;
+font-size: 15px;
 }
 /* Template Components
 ----------------------------------------------------------------------------- */
 /* Buttons
 ---------------------------------- */
+#signToday{
+	font-size: 20px;
+	color: #09776C;
+	background: white;
+}
+
 .btn {
 	padding: 12px 15px;
 	font-size: 14px;
@@ -914,8 +944,11 @@ padding: 44px 0;
 		position: absolute;
 	}
 	.banner-caption h1 {
-    font-size: 36px;
-}
+    	font-size: 36px;
+	}
+	.public-banner-caption h1{
+		font-size: 36px;
+	}
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: transparent;
     background: #0E8275;
